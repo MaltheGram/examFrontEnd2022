@@ -9,7 +9,6 @@ export async function getRequest(){
     console.log(RIDER_API)
 
     try {
-        console.log(2)
         const riders = await fetch(RIDER_API)
             .then(response => handleHttpErrors(response))
             .then(riders => {
@@ -21,7 +20,7 @@ export async function getRequest(){
                     const riderContainer = document.createElement("div")
 
                     let id = document.createElement("p")
-                    id.innerText = riders[i].id
+                    id.innerText = "Rider ID: " + riders[i].id
                     console.log(id)
 
                     let totalTime = document.createElement("p")
@@ -31,13 +30,13 @@ export async function getRequest(){
                     sprintPoint.innerText = `Sprint Point: ${riders[i].sprintPoint}`
 
                     let mountainPoint = document.createElement("p")
-                    mountainPoint.innerText = `Mountain Point ${riders[i].mountainPoint}`
+                    mountainPoint.innerText = `Mountain Point: ${riders[i].mountainPoint}`
 
                     let riderName = document.createElement("p")
                     riderName.innerText = `Rider Name: ${riders[i].riderName}`
 
-                    let riderTeam = document.createElement("p")
-                    riderTeam.innerText = `Team: ${riders[i].teamResponse.teamName}`
+                   /* let riderTeam = document.createElement("p")
+                    riderTeam.innerText = `Team: ${riders[i].teamResponse}`*/
 
                     let age = document.createElement("p")
                     age.innerText = `Rider Age: ${riders[i].age}`
@@ -49,7 +48,7 @@ export async function getRequest(){
 
                     riderContainer.appendChild(id)
                     riderContainer.appendChild(riderName)
-                    riderContainer.appendChild(riderTeam)
+                    //riderContainer.appendChild(riderTeam)
                     riderContainer.appendChild(age)
                     riderContainer.appendChild(totalTime)
                     riderContainer.appendChild(sprintPoint)

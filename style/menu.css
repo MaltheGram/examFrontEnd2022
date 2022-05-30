@@ -97,4 +97,59 @@ nav ul li a :active {
   color: #111111;
 }
 
+.admin-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 18pt;
+}
+.admin-container div {
+  text-align: center;
+  border: 2px solid red;
+  width: 45%;
+  height: 80vh;
+  font-size: 1.345em;
+}
+.admin-container div a:hover {
+  color: blue;
+}
+.admin-container ul {
+  display: inline-block;
+  align-items: center;
+}
+.admin-container ul li {
+  text-align: start;
+}
+
+.post-container {
+  margin-top: 18pt;
+}
+.post-container input[type=text],
+.post-container input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.post-container input[type=submit] {
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.post-container input[type=submit]:hover {
+  background-color: #45a049;
+}
+.post-container div .post-container {
+  border-radius: 50px;
+  padding: 20px;
+}
+
 /*# sourceMappingURL=menu.css.map */
