@@ -1,3 +1,26 @@
 <template>
-    <div class="get-container" id="manage-container"></div>
+    <div class="post-container" id="post-container">
+        <h2>Edit or delete Rider</h2>
+        <label for="id">Rider ID</label>
+        <input type="number" id="id" placeholder="Rider ID">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter rider name">
+
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="Enter rider age">
+
+        <label for="totalTime">Time total</label>
+        <input type="number" id="totalTime" placeholder="Enter total time in hours">
+
+        <label for="sprintPoints">Sprint points</label>
+        <input type="number" id="sprintPoints" placeholder="Enter points">
+
+        <label for="mountainPoints">Mountain points</label>
+        <input type="number" id="mountainPoints" placeholder="Enter points">
+
+        <button id="btn_submit">Edit Rider</button>
+        <button id="btn_delete">Delete Rider</button>
+        <p id="information"></p>
+    </div>
 </template>

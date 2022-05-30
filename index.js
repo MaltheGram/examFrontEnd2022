@@ -8,7 +8,7 @@ import {
     renderTemplate,
 } from "./Ulity/Utility.js"
 import {getRequest} from "./Components/crudOperations/crud.js";
-import {getRiders} from "./Components/crudOperations/manage.js";
+import {editHandler} from "./Components/crudOperations/manage.js";
 import {postHandler} from "./Components/crudOperations/addRider.js";
 
 window.addEventListener("load", async () => {
@@ -37,7 +37,7 @@ window.addEventListener("load", async () => {
         })
         .on("/manage", () => {
             renderTemplate(templateManageRiders, 'content')
-            getRiders()
+            editHandler()
         })
         .on("/addRider", () => {
             renderTemplate(templateAddRider, 'content')
