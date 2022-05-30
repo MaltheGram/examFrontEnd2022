@@ -7,9 +7,11 @@ import {
     loadTemplate,
     renderTemplate,
 } from "./Ulity/Utility.js"
+import {getRequest} from "./Components/crudOperations/crud.js";
 
 window.addEventListener("load", async () => {
     const templateHome = await loadTemplate('./Components/About/about.html')
+    const templateCrudOperations = await loadTemplate('./Components/crudOperations/ridersAndTeams.html')
 
     const router = new Navigo("/", { hash: true });
     router
@@ -21,6 +23,10 @@ window.addEventListener("load", async () => {
         })
         .on("/", () => renderTemplate(templateHome, "content"))
         .on("/about", () => renderTemplate(templateHome, 'content'))
+        .on("/admin", () =>{
+            renderTemplate(templateCrudOperations, 'content')
+            getRequest()
+        })
         .notFound(() => renderText("No page for this route found", "content"))
         .resolve()
 });
