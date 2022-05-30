@@ -70,10 +70,10 @@ nav {
         padding: 4pt;
         margin: 4pt;
 
-        color: white;
+        color: #111111;
 
         &:hover {
-          background-color: #111;
+          color: #ffffff;
         }
         :not(:first-child){
           text-transform: uppercase;
@@ -165,3 +165,36 @@ nav {
   }
 }
 
+.polka {
+  background-image: radial-gradient(#ff0000 20%, transparent 20%),
+radial-gradient(#ff0000 20%, transparent 20%);
+  background-color: #ffffff;
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+}
+
+
+table {
+  font-size: 1.125rem;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: system-ui;
+  thead {
+    background-color: hsl(66, 80%, 60%);
+    color: white;
+  }
+  tbody > tr:nth-child(odd) {
+    background-color: white;
+  }
+  tbody > tr:nth-child(even) {
+    background-color: lightgrey;
+  }
+  th, td {
+    text-align: center;
+    padding: 2pt 8pt;
+  }
+
+  table input {
+    width: 100%
+  }
+}

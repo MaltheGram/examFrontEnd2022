@@ -53,11 +53,5 @@ function attachEventListener(){
     const btnDelete = document.getElementById("btn_delete")
     btn.addEventListener('click',editRider)
     btnDelete.addEventListener('click',deleteRider)
-    setTimeout(this, 3000)
-    btn.onclick = reload
 
-}
-
-function reload(){
-    location.reload()
 }

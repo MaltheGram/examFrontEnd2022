@@ -66,10 +66,10 @@ nav ul li a {
   text-decoration: none;
   padding: 4pt;
   margin: 4pt;
-  color: white;
+  color: #111111;
 }
 nav ul li a:hover {
-  background-color: #111;
+  color: #ffffff;
 }
 nav ul li a :not(:first-child) {
   text-transform: uppercase;
@@ -150,6 +150,37 @@ nav ul li a :active {
 .post-container div .post-container {
   border-radius: 50px;
   padding: 20px;
+}
+
+.polka {
+  background-image: radial-gradient(#ff0000 20%, transparent 20%), radial-gradient(#ff0000 20%, transparent 20%);
+  background-color: #ffffff;
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+}
+
+table {
+  font-size: 1.125rem;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: system-ui;
+}
+table thead {
+  background-color: hsl(66deg, 80%, 60%);
+  color: white;
+}
+table tbody > tr:nth-child(odd) {
+  background-color: white;
+}
+table tbody > tr:nth-child(even) {
+  background-color: lightgrey;
+}
+table th, table td {
+  text-align: center;
+  padding: 2pt 8pt;
+}
+table table input {
+  width: 100%;
 }
 
 /*# sourceMappingURL=menu.css.map */

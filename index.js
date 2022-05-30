@@ -7,12 +7,14 @@ import {
     loadTemplate,
     renderTemplate,
 } from "./Ulity/Utility.js"
-import {getRequest} from "./Components/crudOperations/crud.js";
+import {getRequest} from "./Components/crudOperations/seeRiderStats.js";
 import {editHandler} from "./Components/crudOperations/manage.js";
 import {postHandler} from "./Components/crudOperations/addRider.js";
+import {getRidersInTable} from "./Components/Sorting/sorting.js";
 
 window.addEventListener("load", async () => {
     const templateHome = await loadTemplate('./Components/About/about.html')
+    const templateSorted = await loadTemplate('./Components/Sorting/sorting.html')
     const templateAdmin = await loadTemplate('./Components/crudOperations/crudOperations.html')
     const templateSeeAllRiders = await loadTemplate('./Components/crudOperations/ridersAndTeams.html')
     const templateManageRiders = await loadTemplate('./Components/crudOperations/manageRiders.html')
@@ -34,6 +36,11 @@ window.addEventListener("load", async () => {
         .on("/riders", () => {
             renderTemplate(templateSeeAllRiders,'content')
             getRequest()
+        })
+        .on("/sorted", () => {
+            renderTemplate(templateSorted, 'content')
+            getRidersInTable()
+
         })
         .on("/manage", () => {
             renderTemplate(templateManageRiders, 'content')

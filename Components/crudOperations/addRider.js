@@ -12,7 +12,7 @@ export async function postHandler(){
 async function postRider() {
     const rider = {}
     rider.totalTime = document.getElementById("totalTime").value
-    rider.sprintPoints = document.getElementById("sprintPoints").value
+    rider.sprintPoint = document.getElementById("sprintPoints").value
     rider.mountainPoint = document.getElementById("mountainPoints").value
     rider.riderName = document.getElementById("name").value
     rider.age = document.getElementById("age").value

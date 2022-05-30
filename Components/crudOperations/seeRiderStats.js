@@ -21,7 +21,6 @@ export async function getRequest(){
 
                     let id = document.createElement("p")
                     id.innerText = "Rider ID: " + riders[i].id
-                    console.log(id)
 
                     let totalTime = document.createElement("p")
                     totalTime.innerText =  `Total time: ${riders[i].totalTime}`
@@ -35,42 +34,19 @@ export async function getRequest(){
                     let riderName = document.createElement("p")
                     riderName.innerText = `Rider Name: ${riders[i].riderName}`
 
-                   /* let riderTeam = document.createElement("p")
-                    riderTeam.innerText = `Team: ${riders[i].teamResponse}`*/
 
                     let age = document.createElement("p")
                     age.innerText = `Rider Age: ${riders[i].age}`
 
-                    let deleteBtn = document.createElement("button")
-                    deleteBtn.id = riders[i].id
-                    deleteBtn.innerText = "Delete Rider"
-
-
                     riderContainer.appendChild(id)
                     riderContainer.appendChild(riderName)
-                    //riderContainer.appendChild(riderTeam)
                     riderContainer.appendChild(age)
                     riderContainer.appendChild(totalTime)
                     riderContainer.appendChild(sprintPoint)
                     riderContainer.appendChild(mountainPoint)
-                    riderContainer.appendChild(deleteBtn)
 
 
                     container.appendChild(riderContainer)
-
-                    const options = makeOptions('DELETE')
-
-                    deleteBtn.addEventListener('click',function(){
-                        try {
-                            fetch(RIDER_API + riders[i].id ,options)
-                                .then(response => response.json())
-                            alert("Rider with ID: " + riders[i].id + " has been deleted!")
-
-                        }catch (error){
-                            console.error(error)
-                        }
-                        location.reload()
-                    })
 
                 }
             })
