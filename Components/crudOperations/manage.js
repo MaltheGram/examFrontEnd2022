@@ -14,6 +14,7 @@ async function editRider() {
     const id = document.getElementById("id").value
     rider.id = id
     rider.totalTime = document.getElementById("totalTime").value
+    rider.teamName = document.getElementById("teamName").value
     rider.sprintPoints = document.getElementById("sprintPoints").value
     rider.mountainPoint = document.getElementById("mountainPoints").value
     rider.riderName = document.getElementById("name").value

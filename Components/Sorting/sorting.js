@@ -24,6 +24,7 @@ function makeRows(rows){
       <td>${rider.totalTime}</td>
       <td>${rider.mountainPoint}</td>
       <td>${rider.sprintPoint}</td>
+      <td>${rider.teamName}</td>
     </tr>
     `).join("\n")
     document.getElementById("tbl-body").innerHTML = tRows

@@ -12,6 +12,7 @@ export async function postHandler(){
 async function postRider() {
     const rider = {}
     rider.totalTime = document.getElementById("totalTime").value
+    rider.teamname = document.getElementById("teamName").value
     rider.sprintPoint = document.getElementById("sprintPoints").value
     rider.mountainPoint = document.getElementById("mountainPoints").value
     rider.riderName = document.getElementById("name").value
@@ -33,8 +34,4 @@ async function postRider() {
 function attachEventListener(){
     const btn = document.getElementById("btn_submit")
     btn.addEventListener('click',postRider)
-    btn.onclick = reload
-}
-function reload(){
-    location.reload()
 }
